@@ -11,10 +11,16 @@ Fork or Download the Repository
 
 Open the Index.html file using Live server in VS code Editor
 
-![alt-text](https://github.com/sarathy711/cloudit/blob/master/Responsive.png)
 
 ## Screen Shot
-![alt-text](https://github.com/sarathy711/cloudit/blob/master/screen1.PNG)
+
+#### Desktop View
+
+![alt-text](https://github.com/sarathy711/Mini-Projects/blob/master/expandables/fullscreen.PNG)
+
+#### Mobile View
+
+![alt-text](https://github.com/sarathy711/Mini-Projects/blob/master/expandables/mobilescreen.PNG)
 
 ## Tech Stack
 
