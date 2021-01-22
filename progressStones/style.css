@@ -1,0 +1,159 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    margin:0;
+   background:url('./assets/gaurd.jpg');
+   background-repeat: no-repeat;
+}
+
+#marvel-bg{
+    height: 100%;
+    width: 100%;
+}
+:root{
+    --bg-fill:#3498db;
+    --space-stone:rgba(2,74,246,1);
+    --space-bg:rgba(2,74,246,0.5);
+    --mind-stone:rgb(243, 179, 19);
+    --mind-bg:rgba(243, 179, 19,0.5);    
+    --reality-stone:rgba(252,45,3,1);
+    --reality-bg:rgba(252,45,3,0.5);
+    --power-stone:rgba(204,78,250,1);
+    --power-bg:rgba(204,78,250,0.5);
+    --time-stone:rgba(1,233,175,1);
+    --time-bg:rgba(1,233,175,0.5);
+    --soul-stone:rgba(220,90,41,1);
+    --soul-bg:rgba(220,90,41,0.5);
+}
+*{
+    box-sizing: border-box;
+}
+.container,body,.circle,#marvel-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100vw;
+    max-height: 500px;
+    overflow: visible;   
+}
+#logo{   
+     height: 100px;
+    position: absolute;
+    top: 0;
+    height: 100px;
+}
+.progress-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress-container::before{
+    content: '';
+    height: 4px;
+    /* background-color: lightgray; */
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1;
+}
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    transform: none;
+    margin:10px 0px;
+    transition: transform 0.4s ease-in 0.2s;
+}
+.progress{
+    height: 4px;
+    background-color: var(--bg-fill);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease-in;
+}
+.btn{
+    color: gold;
+    background-color: transparent;
+    padding: 10px 30px;
+    font-size: 14px;
+    border: 2px solid gold;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.btn:focus{outline: none;}
+.btn:active{
+    transform: scale(0.95);
+}
+.btn:disabled{
+   display: none;
+}
+.circle.active{
+    border-color: var(--bg-fill);
+    transform:translateX(-20vw) scale(3); 
+    /* position: absolute; */
+    /* float: left;
+    left: -10%; */
+}
+
+
+
+#space{background-color: var(--space-stone);} 
+#space.active{box-shadow: 0px -2px 30px 30px var(--space-bg) }
+
+#mind{background-color: var(--mind-stone);} 
+#mind.active{box-shadow: 0px -2px 30px 30px var(--mind-bg) }
+
+#reality{background-color: var(--reality-stone);} 
+#reality.active{box-shadow: 0px -2px 30px 30px var(--reality-bg) }
+
+
+#power{background-color: var(--power-stone);} 
+#power.active{box-shadow: 0px -2px 30px 30px var(--power-bg) }
+
+
+
+#time{background-color: var(--time-stone);} 
+#time.active{box-shadow: 0px -2px 30px 30px var(--time-bg) }
+
+#soul{background-color: var(--soul-stone);} 
+#soul.active{box-shadow: 0px -2px 30px 30px var(--soul-bg) }
+
+
+/**MEDIA SCREEN**/
+@media (max-width:768px){
+    #marvel-bg{
+   
+    background-color: #070920 !important;
+    height: 100vh;
+    background-position-y:center !important;
+    }
+    body{
+        background: none;
+    }
+    .progress-container{
+        align-items: flex-end;
+        margin-top: 20%;
+        padding: 0px 15% 0px 0px;
+    }
+}
+@media (min-width:850px){
+    body{background-color: #070920;}
+}
